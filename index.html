@@ -1059,6 +1059,10 @@
             <h1 class="fade-in">Ecossistema Digital – Ferramentas e Projetos</h1>
             <p class="fade-in">Apresentação de protótipos com soluções industriais em IA, incentivando a inovação nos alunos da Aprendizagem Industrial e do Novo Ensino Médio!</p>
             <button id="exploreBtn" class="btn-neon fade-in">Explorar Agora</button>
+            <!-- Botão de Votação adicionado aqui -->
+            <button id="votingBtn" class="btn-neon fade-in" style="margin-top: 20px; background: linear-gradient(90deg, var(--tech-purple), var(--tech-orange)); border-color: var(--tech-orange);">
+                🗳️ Votação
+            </button>
         </div>
     </section>
 
@@ -1380,6 +1384,11 @@
             } catch (e) {
                 showToast("Erro ao adicionar projeto.", true);
             }
+        });
+
+        // Adicionar evento para o botão de votação
+        document.getElementById('votingBtn').addEventListener('click', () => {
+            window.open('https://vota-o-tech.vercel.app/', '_blank');
         });
 
         async function init() {
